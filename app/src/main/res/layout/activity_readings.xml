@@ -1,0 +1,378 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimary"
+    android:orientation="vertical"
+    tools:context=".Readings">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="60dp">
+        <!-- back btn -->
+        <Button
+            android:id="@+id/btn_back"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:background="@drawable/ic_arrow_back_black_24dp" />
+        <!-- activity title -->
+        <TextView
+            android:id="@+id/tv_home_message"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:fontFamily="@font/questrial"
+            android:text="@string/app_name"
+            android:textColor="@color/colorAccent"
+            android:textSize="30sp" />
+    </RelativeLayout>
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="420dp"
+        android:layout_rowWeight="1"
+        android:layout_columnWeight="1"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="10dp"
+        app:cardBackgroundColor="@color/colorPrimary"
+        app:cardCornerRadius="20dp"
+        app:cardElevation="20dp">
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+            <!-- y-axis: ppb -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="40dp"
+                android:layout_marginTop="15dp"
+                android:fontFamily="@font/questrial"
+                android:text="@string/ppb"
+                android:textColor="@color/colorAccent"
+                android:textSize="15sp" />
+            <!-- linechart -->
+            <com.github.mikephil.charting.charts.LineChart
+                android:id="@+id/line_chart"
+                android:layout_width="match_parent"
+                android:layout_height="350dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginBottom="10dp" />
+            <!-- x-axis: secs -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_marginTop="350dp"
+                android:layout_marginEnd="30dp"
+                android:fontFamily="@font/questrial"
+                android:text="@string/time"
+                android:textColor="@color/colorAccent"
+                android:textSize="15sp"
+                tools:ignore="RelativeOverlap" />
+            <!-- level -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginTop="375dp"
+                android:orientation="horizontal">
+                <!-- pollution label -->
+                <TextView
+                    android:layout_width="180dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="40dp"
+                    android:fontFamily="@font/questrial"
+                    android:text="@string/pollution_level"
+                    android:textAlignment="center"
+                    android:textColor="@color/colorAccent"
+                    android:textSize="25sp"
+                    android:textStyle="bold" />
+                <!-- pollution level -->
+                <TextView
+                    android:id="@+id/tv_polLevel"
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginEnd="20dp"
+                    android:fontFamily="@font/questrial"
+                    android:text=""
+                    android:textAlignment="textStart"
+                    android:textColor="@color/colorAccent"
+                    android:textSize="23sp" />
+            </LinearLayout>
+        </RelativeLayout>
+    </androidx.cardview.widget.CardView>
+
+    <!-- scroll start -->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <!-- grid start -->
+        <GridLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:alignmentMode="alignMargins"
+            android:columnCount="1"
+            android:columnOrderPreserved="false"
+            android:padding="10dp"
+            android:rowCount="3">
+            <!-- eco2 card 1 -->
+            <androidx.cardview.widget.CardView
+                android:layout_width="240dp"
+                android:layout_height="200dp"
+                android:layout_rowWeight="1"
+                android:layout_columnWeight="1"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginBottom="10dp"
+                app:cardBackgroundColor="@color/temp01"
+                app:cardCornerRadius="20dp"
+                app:cardElevation="20dp">
+                <!-- deco image1 -->
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="left|center_vertical"
+                    android:layout_marginStart="20dp"
+                    tools:ignore="RtlHardcoded">
+
+                    <ImageView
+                        android:layout_width="120dp"
+                        android:layout_height="120dp"
+                        android:src="@drawable/ic_co2"
+                        tools:ignore="ContentDescription" />
+                </RelativeLayout>
+                <!-- eco2 measurement -->
+                <RelativeLayout
+                    android:layout_width="220dp"
+                    android:layout_height="220dp"
+                    android:layout_gravity="right|center_vertical"
+                    android:layout_margin="15dp"
+                    android:orientation="vertical"
+                    tools:ignore="RtlHardcoded,UseCompoundDrawables">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="false"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="20dp"
+                        android:fontFamily="@font/questrial"
+                        android:text="@string/co2"
+                        android:textColor="@color/colorAccent"
+                        android:textSize="20sp" />
+
+                    <ProgressBar
+                        android:id="@+id/progress_co2"
+                        style="?android:progressBarStyleHorizontal"
+                        android:layout_width="170dp"
+                        android:layout_height="170dp"
+                        android:layout_centerInParent="false"
+                        android:layout_centerHorizontal="true"
+                        android:layout_centerVertical="false"
+                        android:layout_marginTop="40dp"
+                        android:max="2100"
+                        android:progress="1050"
+                        android:progressBackgroundTint="@color/colorPrimary"
+                        android:progressDrawable="@drawable/co2_circle_progress" />
+
+                    <TextView
+                        android:id="@+id/tv_co2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:fontFamily="@font/questrial"
+                        android:text=""
+                        android:textColor="@color/colorAccent"
+                        android:textSize="20sp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="false"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="140dp"
+                        android:fontFamily="@font/questrial"
+                        android:text="@string/ppm"
+                        android:textColor="@color/colorAccent"
+                        android:textSize="20sp" />
+                </RelativeLayout>
+            </androidx.cardview.widget.CardView>
+
+            <!-- tvoc card 2 -->
+            <androidx.cardview.widget.CardView
+                android:layout_width="240dp"
+                android:layout_height="200dp"
+                android:layout_rowWeight="1"
+                android:layout_columnWeight="1"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginBottom="10dp"
+                app:cardBackgroundColor="@color/temp02"
+                app:cardCornerRadius="20dp"
+                app:cardElevation="20dp">
+                <!-- deco image2 -->
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="left|center_vertical"
+                    android:layout_marginStart="20dp"
+                    tools:ignore="RtlHardcoded">
+
+                    <ImageView
+                        android:layout_width="120dp"
+                        android:layout_height="110dp"
+                        android:src="@drawable/ic_biological"
+                        tools:ignore="ContentDescription" />
+                </RelativeLayout>
+                <!-- tvoc measurement -->
+                <RelativeLayout
+                    android:layout_width="220dp"
+                    android:layout_height="220dp"
+                    android:layout_gravity="right|center_vertical"
+                    android:layout_margin="15dp"
+                    android:orientation="vertical"
+                    tools:ignore="RtlHardcoded,UseCompoundDrawables">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="false"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="20dp"
+                        android:fontFamily="@font/questrial"
+                        android:text="@string/tvoc"
+                        android:textColor="@color/colorAccent"
+                        android:textSize="20sp" />
+
+                    <ProgressBar
+                        android:id="@+id/progress_tvoc"
+                        style="?android:progressBarStyleHorizontal"
+                        android:layout_width="170dp"
+                        android:layout_height="170dp"
+                        android:layout_centerInParent="false"
+                        android:layout_centerHorizontal="true"
+                        android:layout_centerVertical="false"
+                        android:layout_marginTop="40dp"
+                        android:max="400"
+                        android:progress="200"
+                        android:progressBackgroundTint="@color/colorPrimary"
+                        android:progressDrawable="@drawable/tvoc_circle_progress" />
+
+                    <TextView
+                        android:id="@+id/tv_tvoc"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:fontFamily="@font/questrial"
+                        android:text=""
+                        android:textColor="@color/colorAccent"
+                        android:textSize="20sp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="false"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="140dp"
+                        android:fontFamily="@font/questrial"
+                        android:text="@string/ppb"
+                        android:textColor="@color/colorAccent"
+                        android:textSize="20sp" />
+                </RelativeLayout>
+            </androidx.cardview.widget.CardView>
+
+            <!-- temp card 3 -->
+            <androidx.cardview.widget.CardView
+                android:layout_width="240dp"
+                android:layout_height="200dp"
+                android:layout_rowWeight="1"
+                android:layout_columnWeight="1"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginBottom="10dp"
+                app:cardBackgroundColor="@color/temp03"
+                app:cardCornerRadius="20dp"
+                app:cardElevation="20dp">
+                <!-- deco image3 -->
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="left|center_vertical"
+                    android:layout_marginStart="20dp"
+                    tools:ignore="RtlHardcoded">
+
+                    <ImageView
+                        android:layout_width="120dp"
+                        android:layout_height="110dp"
+                        android:src="@drawable/ic_circuit"
+                        tools:ignore="ContentDescription" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="220dp"
+                    android:layout_height="220dp"
+                    android:layout_gravity="right|center_vertical"
+                    android:layout_margin="15dp"
+                    android:orientation="vertical"
+                    tools:ignore="RtlHardcoded,UseCompoundDrawables">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="false"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="20dp"
+                        android:fontFamily="@font/questrial"
+                        android:text="@string/temp"
+                        android:textColor="@color/colorAccent"
+                        android:textSize="20sp" />
+
+                    <ProgressBar
+                        android:id="@+id/progress_temp"
+                        style="?android:progressBarStyleHorizontal"
+                        android:layout_width="170dp"
+                        android:layout_height="170dp"
+                        android:layout_centerInParent="false"
+                        android:layout_centerHorizontal="true"
+                        android:layout_centerVertical="false"
+                        android:layout_marginTop="40dp"
+                        android:max="100"
+                        android:progress="50"
+                        android:progressBackgroundTint="@color/colorPrimary"
+                        android:progressDrawable="@drawable/temp_circle_progress" />
+
+                    <TextView
+                        android:id="@+id/tv_temp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:fontFamily="@font/questrial"
+                        android:text=""
+                        android:textColor="@color/colorAccent"
+                        android:textSize="20sp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="false"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="140dp"
+                        android:fontFamily="@font/questrial"
+                        android:text="@string/cel"
+                        android:textColor="@color/colorAccent"
+                        android:textSize="20sp" />
+                </RelativeLayout>
+            </androidx.cardview.widget.CardView>
+        </GridLayout>
+        <!-- grid end -->
+    </ScrollView>
+    <!-- scroll end -->
+</LinearLayout>

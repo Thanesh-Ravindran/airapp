@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- main color schemes -->
+    <color name="colorPrimary">#ffffff</color>
+    <color name="colorPrimaryDark">#666666</color>
+    <color name="colorAccent">#000003</color>
+    <color name="colorTransparent">#00000000</color>
+
+    <!-- login/regi/rec color schemes -->
+    <color name="colorbg1">#2ecc71</color>
+    <color name="colorbg2">#3498db</color>
+    <color name="colorbg3">#ff6b6b</color>
+
+
+    <!-- result card color schemes -->
+    <color name="temp01">#ECE4B7</color>
+    <color name="temp02">#D9DD92</color>
+    <color name="temp03">#EABE7C</color>
+    <color name="temp04">#02111B</color>
+    <color name="temp05">#3F4045</color>
+    <color name="temp06">#30292F</color>
+    <color name="temp07">#CDDDDD</color>
+
+
+    <!-- home card color schemes -->
+    <color name="tem1">#D88373</color>
+    <color name="tem2">#86AE68</color>
+    <color name="tem3">#8E8997</color>
+    <color name="tem4">#36393B</color>
+
+    <!-- readme card color schemes -->
+    <color name="temp11">#F2DFD7</color>
+    <color name="tem22">#D4C1EC</color>
+    <color name="tem33">#9F9FED</color>
+    <color name="tem44">#736CED</color>
+
+
+
+
+
+</resources>

@@ -1,0 +1,67 @@
+<resources>
+    <!-- app name -->
+    <string name="app_name">AirApp</string>
+
+    <!-- login/regis/reset -->
+    <string name="password">Password</string>
+    <string name="email">Email</string>
+    <string name="sign_in">Sign In</string>
+    <string name="sign_in_here">Sign in here</string>
+    <string name="sign_up">Sign Up</string>
+    <string name="sign_up_here">Sign up here</string>
+    <string name="forgot_pwd">Forget Password?</string>
+    <string name="reset_msg">Enter email to reset Password</string>
+    <string name="send">Send</string>
+
+    <!-- home screen -->
+    <string name="home">Home</string>
+    <string name="logout">Logout</string>
+    <string name="about">About</string>
+    <string name="manual">Excel</string>
+
+    <!-- result screen -->
+    <string name="co2">eCO2</string>
+    <string name="tvoc">TVOC</string>
+    <string name="temp">Internal Temperature</string>
+    <string name="ppm">ppm</string>
+    <string name="ppb">ppb</string>
+    <string name="cel">°C</string>
+    <string name="time">≈7secs</string>
+    <string name="pollution_level">Pollution level :</string>
+
+    <!-- about screen -->
+    <string name="dwn_msg">Tap on ⓘ icon to download User Documentation</string>
+    <string name="question1">About app</string>
+    <string name="question2">What is eCO2?</string>
+    <string name="question3">What is TVOC?</string>
+    <string name="question4">Can the app detect other readings?</string>
+    <string name="answer1">
+        AirApp is an Android application for indoor air quality monitoring .
+        The app uses real-time readings of eCO2 and TVOC readings from CCS811 Air Quality sensor
+        - which is connected to a NodeMCU, placed inside a waste bin.
+        This application is used to control air pollution of household waste.
+    </string>
+    <string name="answer2">
+        eCO2 stands for Equivalent calculated Carbon Dioxide, measured using parts-per-million (ppm).
+        The sensor is able to pick up readings up to 8192 ppm.
+        350 - 1000 ppm; typical concentration within indoor space with good air exchange.
+        1000 - 2000 ppm; eCO2 levels are relatively high. Expect drowsiness and poor air.
+        2000 - 5000 ppm; eCO2 are severely high. Expect headaches, sleepines and stagnant, stale, stuffy air.
+    </string>
+    <string name="answer3">
+        TVOC stands for Total Volative Organic Compound, measured using parts-per-billion (ppb).
+        The sensor is able to pick up readings up to 1187 ppb. TVOC are emitted by majority of household products such as:
+        paints, aerosol sprays, air fresheners, craft materials including glues, adhesives and permanent markets.
+        50 - 325 ppb; are thought to be acceptable. Any readings higher than 325 ppb are usually harmful.
+    </string>
+    <string name="answer4">
+        Currently, the NodeMCU is not equipped with other sensors such as Humidity sensor.
+        However, in future work - hardware and software upgrade will be implemented.
+    </string>
+
+    <!-- excel screen -->
+    <string name="download_msg">Export Readings as Excel</string>
+    <string name="export">Export</string>
+
+
+</resources>

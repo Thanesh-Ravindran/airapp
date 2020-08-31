@@ -1,0 +1,227 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".About">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="60dp">
+        <!-- back btn -->
+        <Button
+            android:id="@+id/btn_back"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:background="@drawable/ic_arrow_back_black_24dp" />
+        <!-- activity title -->
+        <TextView
+            android:id="@+id/tv_home_message"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:fontFamily="@font/questrial"
+            android:text="@string/about"
+            android:textColor="@color/colorAccent"
+            android:textSize="30sp" />
+
+        <Button
+            android:id="@+id/btn_doc"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_centerHorizontal="false"
+            android:layout_marginStart="360dp"
+            android:layout_marginTop="15dp"
+            android:background="@drawable/ic_info_outline_black_24dp" />
+    </RelativeLayout>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="60dp">
+        <!-- short dwn msg -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:fontFamily="@font/questrial"
+            android:text="@string/dwn_msg"
+            android:textColor="@color/colorAccent"
+            android:textStyle="italic"
+            android:textSize="15sp" />
+    </RelativeLayout>
+
+    <!-- scroll start -->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <!-- grid start -->
+        <GridLayout
+            android:columnCount="1"
+            android:rowCount="4"
+            android:alignmentMode="alignMargins"
+            android:columnOrderPreserved="false"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:padding="10dp">
+
+            <!-- q/card 1 -->
+            <androidx.cardview.widget.CardView
+                app:cardBackgroundColor="@color/temp11"
+                android:layout_width="match_parent"
+                android:layout_height="240dp"
+                android:layout_rowWeight="1"
+                android:layout_columnWeight="1"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginBottom="10dp"
+                app:cardCornerRadius="20dp"
+                app:cardElevation="20dp">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginEnd="10dp"
+                    android:layout_marginTop="20dp"
+                    android:fontFamily="@font/questrial"
+                    android:text="@string/question1"
+                    android:textAlignment="center"
+                    android:textColor="@color/colorAccent"
+                    android:textSize="25sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="70dp"
+                    android:layout_marginEnd="10dp"
+                    android:fontFamily="@font/questrial"
+                    android:justificationMode="inter_word"
+                    android:text="@string/answer1"
+                    android:textColor="@color/colorAccent"
+                    android:textSize="15sp"
+                    tools:targetApi="o" />
+            </androidx.cardview.widget.CardView>
+
+            <!-- q/card 2 -->
+            <androidx.cardview.widget.CardView
+                app:cardBackgroundColor="@color/tem22"
+                android:layout_width="240dp"
+                android:layout_height="240dp"
+                android:layout_rowWeight="1"
+                android:layout_columnWeight="1"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginBottom="10dp"
+                app:cardCornerRadius="20dp"
+                app:cardElevation="20dp">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginEnd="10dp"
+                    android:layout_marginTop="20dp"
+                    android:fontFamily="@font/questrial"
+                    android:text="@string/question2"
+                    android:textAlignment="center"
+                    android:textColor="@color/colorAccent"
+                    android:textSize="25sp"
+                    android:textStyle="bold"/>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="70dp"
+                    android:layout_marginEnd="10dp"
+                    android:fontFamily="@font/questrial"
+                    android:text="@string/answer2"
+                    android:justificationMode="inter_word"
+                    android:textColor="@color/colorAccent"
+                    android:textSize="15sp"
+                    tools:targetApi="o" />
+            </androidx.cardview.widget.CardView>
+
+            <!-- q/card 3 -->
+            <androidx.cardview.widget.CardView
+                app:cardBackgroundColor="@color/tem33"
+                android:layout_width="240dp"
+                android:layout_height="240dp"
+                android:layout_rowWeight="1"
+                android:layout_columnWeight="1"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginBottom="10dp"
+                app:cardCornerRadius="20dp"
+                app:cardElevation="20dp">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginEnd="10dp"
+                    android:layout_marginTop="20dp"
+                    android:fontFamily="@font/questrial"
+                    android:text="@string/question3"
+                    android:textAlignment="center"
+                    android:textColor="@color/colorAccent"
+                    android:textSize="25sp"
+                    android:textStyle="bold"/>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="70dp"
+                    android:layout_marginEnd="10dp"
+                    android:fontFamily="@font/questrial"
+                    android:text="@string/answer3"
+                    android:justificationMode="inter_word"
+                    android:textColor="@color/colorAccent"
+                    android:textSize="15sp"
+                    tools:targetApi="o" />
+            </androidx.cardview.widget.CardView>
+
+            <!-- q/card 4 -->
+            <androidx.cardview.widget.CardView
+                app:cardBackgroundColor="@color/tem44"
+                android:layout_width="240dp"
+                android:layout_height="240dp"
+                android:layout_rowWeight="1"
+                android:layout_columnWeight="1"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginBottom="10dp"
+                app:cardCornerRadius="20dp"
+                app:cardElevation="20dp">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginEnd="10dp"
+                    android:layout_marginTop="20dp"
+                    android:fontFamily="@font/questrial"
+                    android:text="@string/question4"
+                    android:textAlignment="center"
+                    android:textColor="@color/colorAccent"
+                    android:textSize="20sp"
+                    android:textStyle="bold"/>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="70dp"
+                    android:layout_marginEnd="10dp"
+                    android:fontFamily="@font/questrial"
+                    android:text="@string/answer4"
+                    android:justificationMode="inter_word"
+                    android:textColor="@color/colorAccent"
+                    android:textSize="15sp"
+                    tools:targetApi="o" />
+            </androidx.cardview.widget.CardView>
+        </GridLayout>
+        <!-- grid end -->
+    </ScrollView>
+    <!-- scroll end -->
+</LinearLayout>
